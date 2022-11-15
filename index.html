@@ -9,19 +9,19 @@
 <title>Download Here!</title>
 </head>
 <body>
-	<h1>Among us is real</h1>
-<a href="./Dumb Website.7z" download class="download-btn" id="croc-button">Download
+<a href="./Dumb Website.7z" download class="download-btn" id="download-button">Download
 	<i class="fa fa-download"></i>
 </a>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
 
-        var crocodilize = function() {
+        var downloading = function() {
  	$("a").text("Downloading");
+	$("a").css("background-color", "gray");
 }
-        $("#croc-button").on("click", function() {
+        $("#download-button").on("click", function() {
             console.log("you clicked me!!");
-            crocodilize();
+            downloading();
         });   
  </script>
 </body>
