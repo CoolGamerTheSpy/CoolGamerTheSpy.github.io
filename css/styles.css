@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+@import url('https://fonts.googleapis.com/css?family=Rubik+Glitch:300,400');
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: black;
+}
+
+html {
+    background-color: rgb(67, 79, 119);
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.Question {
+    text-align: center;  
+}

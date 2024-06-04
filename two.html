@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <img src="./img/android-chrome-384x384.png" width="150" height="150"/>
+    <br>
+    <script type="text/javascript">
+      /***********************************************
+      * Disable "Enter" key in Form script- By Nurul Fadilah(nurul@REMOVETHISvolmedia.com)
+      * This notice must stay intact for use
+      * Visit http://www.dynamicdrive.com/ for full source code
+      ***********************************************/               
+      function handleEnter (field, event) {
+        var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+        if (keyCode == 13) {
+          var i;
+          for (i = 0; i < field.form.elements.length; i++)
+            if (field == field.form.elements[i])
+              break;
+          i = (i + 1) % field.form.elements.length;
+          field.form.elements[i].focus();
+          return false;
+        } 
+        else
+          return true;
+      }     
+    </script>
+		<title>Question 2</title>
+	</head>
+  <body>
+    <script>
+      var attempt = 3; // Variable to count number of attempts.
+      // Below function Executes on click of login button.
+      function validate(){
+        var username = document.getElementById("username").value;
+        if ( username == "No"){
+          alert ("Correct");
+         window.location = "three.html"; // Redirecting to other page.
+         return false;
+        }
+        else{
+          attempt --;// Decrementing by one.
+          alert("You have "+attempt+" attempt(s) left!");
+          // Disabling fields after 3 attempts.
+          if( attempt == 0){
+            document.getElementById("username").disabled = true;
+            document.getElementById("submit").disabled = true;
+            return false;
+          }
+        }
+      }
+    </script>
+    <div class="Question">
+      <h1>Question 2</h1>
+      <p>Is Gaming Club only for video games?</p>
+			<br>
+      <form id="form_id" method="post" name="myform">
+        <input type="text" name="Answer" id="username" onkeypress="return handleEnter(this, event)"/>
+        <br>
+        <br>
+        <input type="button" value="Submit" id="submit" onclick="validate()"/>
+        </form>
+  </body>
+</html>
