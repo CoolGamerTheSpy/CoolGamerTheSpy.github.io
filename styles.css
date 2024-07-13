@@ -53,9 +53,6 @@ main {
 }
 
 .search-form {
-    position: absolute;
-    top: 6px;
-    left: 80px;
     display: flex;
     gap: 0.5rem;
     margin-bottom: 2rem;
